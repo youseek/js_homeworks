@@ -7,8 +7,8 @@ admin = name;
 alert(admin);
 
 // task2
-let planetName = 'Earth';
-let visitorName = 'John';
+const planetName = 'Earth';
+const visitorName = 'John';
 
 // task3
 let mixedValue = "10" + 10;
