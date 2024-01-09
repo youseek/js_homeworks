@@ -7,7 +7,7 @@ switch (numOrStr) {
     case null:
         console.log('ви скасували')
         break;
-    case '':
+    case (numOrStr.trim() === ''):
         console.log('Empty String');
         break;
     case isNaN(+numOrStr):
