@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submitted Data</title>
+</head>
+<body>
+<h1>Submitted Data:</h1>
+<ul id="submittedData"></ul>
+
+<script>
+  const formData = JSON.parse(localStorage.getItem('formData'));
+  const submittedDataElement = document.getElementById('submittedData');
+
+  if(formData) {
+    Object.keys(formData).forEach(key => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${key}: ${formData[key]}`;
+      submittedDataElement.appendChild(listItem);
+    });
+  } else {
+    submittedDataElement.textContent = 'No submitted data available';
+  }
+</script>
+</body>
+</html>
